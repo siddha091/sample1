@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>java script</title>
+	<script type = "text/javascript">
+	function check() {
+		if(myform.password.value=="")
+		{
+			alert("Enter the Password.");
+			myform.password.focus();
+			return false;
+		}
+		/*if((myform.password.value).length < 8)
+		{
+			alert("Password should be minimum 8 characters.");
+			myform.password.focus();
+			return false;
+		}*/
+		if(myform.re-enterpassword.value=="")
+		{
+			alert("Enter the confirmation password.");
+			return false;
+		}
+		if(myform.password.value == myform.re-enterpassword.value)
+		{
+			alert("Password match");
+			return true;
+		}
+		else 
+		{
+			alert("Password don’t match, re-enter password");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="myform" method = "post" action = "validated.html" />
+	Password: <input type="password" name="password" placeholder = "Enter Password"/><br>
+	re-enter Password:<input type="password" name="re-enterpassword" placeholder = "re-Enter Password"/><br>
+	<input type="submit" value="submit" onclick="return check();"/><br>
+	
+	</form>
+	
+</body>
+</html>
